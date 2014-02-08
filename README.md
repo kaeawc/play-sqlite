@@ -1,3 +1,3 @@
-# Play Sqlite Example
+# Play SQLite Example
 
 Demonstrates how to setup a Sqlite datasource for both testing and development using automatic evolutions and Anorm.
