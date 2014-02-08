@@ -1,4 +1,10 @@
 
 GET     /                           controllers.Application.index
 
+GET     /widget/:id                           controllers.Widgets.get(id:Int)
+GET     /widget/find/:name                           controllers.Widgets.find(name:String)
+POST     /widget                           controllers.Widgets.post
+PUT     /widget/:id                           controllers.Widgets.put(id:Int)
+DELETE     /widget/:id                           controllers.Widgets.delete(id:Int)
+
 GET     /*file               controllers.Assets.at(path="/public", file)
