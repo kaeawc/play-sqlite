@@ -1,31 +1,30 @@
-
+@(widgets:Long)
 
 @main {
 
-  <h1>Play SQLite Example</h1>
-  <h2>Widget Factory</h2>
+  <h1>Widget Factory</h1>
+  <div>Current Number of Widgets: <span id="widget-count">@widgets</span></div>
   <div class="container">
     <h3>Widget Search</h3>
-    <div class="container">
-      <h3>Get By Id</h3>
-      <span><input type="text" name="name" placeholder="Widget Id"></span>
-      <span><input type="button" value="Get" /></span>
-      <h3>Find By Name</h3>
-      <span><input type="text" name="name" placeholder="Search for a Widget"></span>
-      <span><input type="button" value="Search" /></span>
-    </div>
-    <div id="search-results"></div>
-    <div>Current Number of Widgets: <span id="widget-count">0</span></div>
+    <span>
+      <input id="search-name" type="text" name="name" placeholder="Search for a Widget by Name">
+      <div class="search-results"></div>
+    </span>
+  </div>
+  <div class="container">
     <h3>Create a New Widget</h3>
-    <div class="container">
-      <div><input type="text" name="name" placeholder="Name for a new Widget"></div>
-      <div><input type="button" value="Create" /></div>
-    </div>
+      <span><input id="create-name" type="text" name="name" placeholder="Name for a new Widget"></span>
+      <span><input id="create" type="button" value="Create" /></span>
+  </div>
+  <div id="selected" class="container">
     <h3>Selected Widget:</h3>
-    <div class="container">
-      <div id="widget-id">&nbsp;</div>
-      <div id="widget-name">&nbsp;</div>
-      <div id="widget-created">&nbsp;</div>
+    <div id="no-widget-selected">None</div>
+    <div id="widget-selected">
+      Some(Widget(
+      <span id="widget-id">&nbsp;</span>,
+      <span id="widget-name">&nbsp;</span>,
+      <span id="widget-created">&nbsp;</span>
+      ))
     </div>
   </div>
 

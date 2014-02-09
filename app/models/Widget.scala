@@ -54,7 +54,7 @@ object Widget extends ((
             name,
             created
           FROM widget
-          WHERE name = {name};
+          WHERE name LIKE '%' || {name} || '%';
         """
       ).on(
         'name -> name
